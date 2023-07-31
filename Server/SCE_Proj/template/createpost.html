@@ -1,0 +1,26 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/createpost.css' %}">
+    <!--<link rel="stylesheet" href="{%static '/css/createpost.css'%}">-->
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+       <header>New post</header>
+       <form action="/createpost/" method="post">{% csrf_token %}
+       <textarea name="title" placeholder="title" class="title"></textarea><br/>
+       <textarea name="tags" placeholder="tags" class="tags"></textarea><br/>
+       <textarea name="content" placeholder="your text" class="text"></textarea><br/>
+        <div class="btn"><input class="btnn" type="submit" value="Update" name = "create_post" method = "POST" >
+        </div>
+    </form>
+    </div>
+
+    
+</body>
+</html>

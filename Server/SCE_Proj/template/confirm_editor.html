@@ -1,0 +1,109 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Editor Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/css/confirm_editor.css'%}" />
+</head>
+<body>
+    <div class="bg-img">
+     <header class="container-fluid">
+        <div class="container">
+        <div class ="logo">
+            <h2>ExplorAir</h2>
+              </div>
+                 <nav>
+                 <a href="http://explorair.link/about/">About</a> |
+                 <a href="http://explorair.link/log_out/">Log out</a>
+                 <a href="http://explorair.link/homepage/">Home</a>
+
+           </nav>                
+        </div>
+     </header>
+
+
+     <table class="main-table">
+        <caption>Confirm editor's reqquests</caption>
+        <thead>
+            <tr>
+                <td>Username</td>
+                <td>Email</td>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Approve</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <form action="/confirm_editor/" method="post">{% csrf_token %}<!--************-->
+            <tr>
+                <td>{{Username1}}</td>
+                <td><input type="email" name="email" value="{{email1}}"></td>
+                <td>{{Firstname1}}</td>
+                <td>{{Lastname1}}</td>
+                <td>
+                        <input class="request-btn-v" type="submit" name="accept" id="accept1" value="Approve">
+                        <input class="request-btn-x" type="submit" name="reject" id="decline1" value="Reject">
+                </td>
+            </tr>
+        </form>
+        <form action="/confirm_editor/" method="post">{% csrf_token %}
+            <tr>
+                <td>{{Username2}}</td>
+                <td><input type="email" name="email" value="{{email2}}"></td>
+                <td>{{Firstname2}}</td>
+                <td>{{Lastname2}}</td>
+                <td>
+                        <input class="request-btn-v" type="submit" name="accept" id="accept2" value="Approve">
+                        <input class="request-btn-x" type="submit" name="reject" id="decline2" value="Reject">
+                </td>
+            </tr>
+        </form>
+        <form action="/confirm_editor/" method="post">{% csrf_token %}
+        <tr>
+                <td>{{Username3}}</td>
+                <td><input type="email" name="email" value="{{email3}}"></td>
+                <td>{{Firstname3}}</td>
+                <td>{{Lastname3}}</td>
+                <td>
+                        <input class="request-btn-v" type="submit" name="accept" id="accept3" value="Approve">
+                        <input class="request-btn-x" type="submit" name="reject" id="decline3" value="Reject">
+                </td>
+            </tr>
+        </form>
+        <form action="/confirm_editor/" method="post">{% csrf_token %}
+            <tr>
+                <td>{{Username4}}</td>
+                <td><input type="email" name="email" value="{{email3}}"></td>
+                <td>{{Firstname4}}</td>
+                <td>{{Lastname4}}</td>
+                <td>
+                        <input class="request-btn-v" type="submit" name="accept" id="accept4" value="Approve">
+                        <input class="request-btn-x" type="submit" name="reject" id="decline4" value="Reject">
+                </td>
+            </tr>
+        </form>
+        <form action="/confirm_editor/" method="post">{% csrf_token %}
+            <tr>
+                <td>{{Username5}}</td>
+                <td><input type="email" name="email" value="{{email3}}"></td>
+                <td>{{Firstname5}}</td>
+                <td>{{Lastname5}}</td>
+                <td>
+                        <input class="request-btn-v" type="submit" name="accept" id="accept5" value="Approve">
+                        <input class="request-btn-x" type="submit" name="reject" id="decline5" value="Reject">
+                </td>
+            </tr>
+        </form>
+        </tbody>
+
+        <tfoot>
+
+        </tfoot>
+        
+     </table>
+    </div>
+</body>
+</html>

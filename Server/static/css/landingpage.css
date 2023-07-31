@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+body{
+      background-image: url("/static/images/background.jpg");
+      height: 100%; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+margin: 0;
+font-family: sans-serif;
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0 16px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    min-height: 80px;
+}
+header h2{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a{
+    color: brown;
+    text-decoration: none;
+    padding: 0 32px;
+}
+header nav a:hover{
+color: black;
+text-decoration: underline;
+
+}
+.strip {
+    min-height: 800px;
+
+}
+.strip .container{
+    color: rgb(44, 30, 8);
+    max-width: 500px;
+    margin: o auto;
+    display: flex;
+    text-align: center;
+}
+.buttons{
+    font-weight: bold;
+    background: rgba(240, 243, 226, 0.062);
+    border-radius: 10px;
+}
+.nav buttons{
+    color:honeydew;
+    text-decoration: none;
+    padding: 12px 32px;
+}
+
+.buttons:hover{
+    background:burlywood;
+}

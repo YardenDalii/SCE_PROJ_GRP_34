@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExplorAir | Hello</title>
+    <link rel="stylesheet" href = "{%static '/css/landingpage.css'%}">
+    <!--<link rel="stylesheet" href="landingpage.css">-->
+    <script>function continueF() {window.location.href="http://explorair.link/homepage/";}</script>
+    <script>function registerF() {window.location.href="http://explorair.link/register/";}</script>
+    <script>function loginF() {window.location.href="http://explorair.link/login/";}</script>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="container">
+        <div class ="logo">
+            <h2>ExplorAir</h2>
+        </div>
+        <nav>
+            <a href="http://explorair.link./about/">About</a> |
+        </nav>                
+</div>
+    </header>
+    <div class="strip container-fluid">
+        <div class="container">
+            <div>
+            <h1>Welcome to our blog</h1>
+            <p>Here you can see recommendations and opinions of people on tourist destinations, you can comment and rate and even become one of the writers and publish posts with your experiences from trips around the world and recommendations on places people must go on their trips or even reviews of places not worth the effort or money.</p>
+            <br>
+            <nav>
+              <input class = "buttons" type="submit" value="Log in" onClick="loginF()"/>
+              <input class = "buttons" type="submit" value="Register" onClick="registerF()"/>
+              <input class = "buttons" type="submit" value="Continue" onClick="continueF()"/>
+            </nav>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

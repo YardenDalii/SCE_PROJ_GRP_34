@@ -1,0 +1,107 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" type="text/css" href="{%static '/css/search.css'%}">
+    <script src="https://kit.fontawesome.com/85adb81827.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="container">
+            <div class ="logo">
+                <h2>ExplorAir</h2>
+            </div>
+            <nav>
+                <form action = "/search/" method="POST">{% csrf_token %}
+                    <input type="text" name = "search_string" placeholder="Search..">
+                <button type="submit" name = "search"></form><i class="fa fa-search"></i></button> |
+                <a href="http://explorair.link/settings/"><i class="fas fa-user-cog"></i></a> |
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="row row-1">
+            <section>
+                <i class="icon fas fa-home"></i>
+                <div class="details">
+                    <span class="title">{{title1}}</span>
+                    <span>{{date1}}</span>
+                </div>
+                <p>{{post_text1}}</p>
+                <div class="bottom">
+                    <a href="#">Read more</a>                   
+                </div>
+            </section>
+        </div>
+        <div class="row row-2">
+            <section>
+                <i class="icon fas fa-star"></i>
+                <div class="details">
+                    <span class="title">{{title2}}</span>
+                    <span>{{editor_name2}}, {{date2}}</span>
+                </div>
+                <p>{{post_text2}}</p>
+                <div class="bottom">
+                    <a href="#">Read more</a>
+                </div>
+            </section>
+        </div>
+        <div class="row row-1">
+            <section>
+                <i class="icon fas fa-rocket"></i>
+                <div class="details">
+                    <span class="title">{{title3}}</span>
+                    <span>{{editor_name3}}, {{date3}}</span>
+                </div>
+                <p>{{post_text3}}</p>
+                <div class="bottom">
+                    <a href="#">Read more</a>
+                </div>
+            </section>
+        </div>
+        <div class="row row-2">
+            <section>
+                <i class="icon fas fa-globe"></i>
+                <div class="details">
+                    <span class="title">{{title4}}</span>
+                    <span>{{editor_name4}}, {{date4}}</span>
+                </div>
+                <p>{{post_text4}}</p>
+                <div class="bottom">
+                    <a href="#">Read more</a>
+                </div>
+            </section>
+        </div>
+        <div class="row row-1">
+            <section>
+                <i class="icon fas fa-paper-plane"></i>
+                <div class="details">
+                    <span class="title">{{title5}}</span>
+                    <span>{{editor_name5}}, {{date5}}</span>
+                </div>
+                <p>{{post_text5}}</p>
+                <div class="bottom">
+                    <a href="#">Read more</a>
+                </div>
+            </section>
+        </div>
+        
+    </div>
+
+    <div class="navigation">
+        <form action = "/search/" method = "post">{% csrf_token %}
+        <input class="nav-btn" type="submit" name = 'next' value="Next">    </form>
+        <form action = "/search/" method = "post">{% csrf_token %}
+        <input class="nav-btn" type="submit" name = 'prev' value="Prev">
+    </form>
+
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>readMore</title>
+    <link rel="stylesheet" href="readMore.css">
+    <script src="https://kit.fontawesome.com/85adb81827.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="post">
+        <div class="head">
+            <h1>{{title}}</h1>
+            <h3>{{place}}, {{country}}</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/brazil.jpg", style="width: 90%;">
+                <div class="container">
+                    <h2>{{editor name}}, {{date}}</h2>
+                    <p>{{post_text}}
+                    </p>
+                    <p><button class="button"><i class="fas fa-thumbs-up"></i></button></p>
+                    <form action="\readMore\" method="post">
+                    <div class="comment">
+                        <textarea placeholder="add comment" style="width: 87%;"></textarea>
+                        <input type="submit" placeholder="far fa-paper-plane" style="color: black;  padding-left: 20px;"></input>
+                    </div>
+                </form>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>

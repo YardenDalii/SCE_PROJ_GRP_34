@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/become_editor.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/become_editor/" method="post">{% csrf_token %}
+    <div class="content">
+       <header>become an editor</header>
+       <a>In order to become an editor and receive permission to upload and edit posts, you are asked to send us details of the places you have been and you are interested in uploading posts about your experiences in those places. In addition, you must attach a photo of your flight ticket and photos from those places in order to verify that you have indeed been to those places</a>
+       <textarea name = "content" placeholder="your text"></textarea><br/>
+        <button class="picture">add pictures</button>
+        <button type="submit" class="post_request"> send </button><br/>   
+    </div>
+</form>
+
+    
+</body>
+</html>

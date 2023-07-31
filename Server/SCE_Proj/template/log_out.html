@@ -1,0 +1,24 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>ExplorAir | Log out</title>
+      <link rel="stylesheet" href="{%static '/css/log_out.css'%}">
+   </head>
+   <body>
+       <form action="" method="post">
+      <div id="error-page">
+         <div class="content">
+            <h4 data-text="Opps! Page not found">
+               Are you sure you want to log out?
+            </h4>
+            <div class="btns">
+               <a href="http://explorair.link/homepage/">No, return home</a>
+               <input type="submit" class="logout" name="logout" value="Yes">{% csrf_token %}
+            </div>
+         </div>
+      </div>
+    </form>
+   </body>
+</html>

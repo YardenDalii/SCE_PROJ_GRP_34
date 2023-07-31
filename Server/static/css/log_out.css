@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+      background-image: url("/static/images/background.jpg");
+      height: 100%; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+margin: 0;
+font-family: sans-serif;
+}
+#error-page{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  right: 25%;
+  bottom: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+#error-page .content{
+  max-width: 500px;
+  text-align: center;
+}
+
+
+.content h4{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2em;
+  max-width: 600px;
+  position: relative;
+}
+.content h4:after{
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+  -webkit-text-fill-color: transparent;
+}
+
+.content .btns{
+  margin: 25px 0;
+  display: inline-flex;
+}
+.content .btns a{
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid #69a6ce;
+  color: #69a6ce;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.content .btns .logout{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #69a6ce;
+    color: #69a6ce;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.content .btns a:hover{
+  background: #69a6ce;
+  color: #fff;
+}
+.content .btns .logout:hover{
+    background: #69a6ce;
+    color: #fff;
+  }

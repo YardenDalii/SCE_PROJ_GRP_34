@@ -1,0 +1,24 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>ExplorAir | Log out</title>
+      <link rel="stylesheet" href="{%static '/css/ask_guest.css'%}">
+   </head>
+   <body>
+       <form action="" method="post">
+      <div id="error-page">
+         <div class="content">
+            <h4 data-text="Opps! Page not found">
+               You are not registered, do you want to register now?
+            </h4>
+            <div class="btns">
+               <a href="http://explorair.link/homepage/">Continue as guest</a>
+               <a href="http://explorair.link/register/" class="logout" name="logout">Register now</a>
+            </div>
+         </div>
+      </div>
+    </form>
+   </body>
+</html>

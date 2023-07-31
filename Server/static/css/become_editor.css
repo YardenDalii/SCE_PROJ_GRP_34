@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+body{
+      background-image: url("images/background.jpg.jpg");
+      height: 100%; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      font-family: sans-serif;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+}
+.content{
+    background-color: rgba(77, 77, 77, 0.521);
+    width: 800px;
+    height: 370px;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0,0, 12);
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+button{
+    padding: 0 32px;
+}
+textarea{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;  
+}
+.content a{
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}

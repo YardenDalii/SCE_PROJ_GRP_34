@@ -1,0 +1,114 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Account Settings</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static '/css/setting_page.css'%}">
+</head>
+
+<body>
+    <section class="py-5 my-5">
+        <div class="container">
+            <h1 class="mb-5">Account Settings</h1>
+            <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+                <div class="profile-tab-nav border-right">
+                    <div class="p-4">
+                        <div class="img-circle text-center mb-3">
+                            <img src="{%static 'images/blank_profile_picture.png' %}" alt="Image" class="shadow">
+                        </div>
+                        <h4 class="text-center">{{fullname}}</h4><br>
+                        <h6>{{email}}
+                        </h6>
+                    </div>
+                </div>
+                <form action="/settings/" method="post">{% csrf_token%}
+                    <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="account" role="tabpanel"
+                            aria-labelledby="account-tab">
+                            <h3 class="mb-4">Account Settings</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" name="name" placeholder="{{firstname}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" name="surname"
+                                            placeholder="{{lastname}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>NickName</label>
+                                        <input type="text" class="form-control" name="nickname"
+                                            placeholder="{{nickname}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Bio</label>
+                                        <textarea class="form-control" name="bio" rows="4"
+                                            placeholder="{{bio}}"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h3 class="mb-4">Password Settings</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Old password</label>
+                                    <input type="password" name="old_pass" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>New password</label>
+                                    <input type="password" name="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Confirm new password</label>
+                                    <input type="password" name="confirmpass" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <input class="btn btn-primary" type="submit" value="Update" name="update_info" method="POST"
+                                onclick="msg()">
+                            <script>
+                                function msg() {
+                                    alert("your details have been update");
+                                }
+                            </script>
+                            <input class="btn btn-light" type="reset" value="clear">
+                            <input class="btn btn-light" type="submit" value="back" onClick="backF()">
+                            <script>
+                                function backF() {
+                                    window.location.href = "http://explorair.link/homepage/";
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+            </div>
+            </form>
+
+        </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 16px 16px;
+  width: 100%;
+}
+header{
+  margin-right: 30px;
+  min-height: 80px;
+  justify-content: space-between;
+}
+header h2{
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a{
+  color: brown;
+  text-decoration: none;
+  padding: 0 32px;
+}
+header nav a:hover{
+color: black;
+text-decoration: underline;
+
+}
+
+body{
+    background-image: url("/static/images/background.jpg");
+      height: 100%; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+margin: 0;
+font-family: sans-serif;
+  display: grid;
+  place-items: center;
+  text-align: center;
+ 
+
+}
+.slider{
+  max-width: 1100px;
+  display: flex;
+}
+.slider .card{
+  flex: 1;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.753);
+}
+.slider .card .img{
+  height: 200px;
+  width: 100%;
+}
+.slider .card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider .card .content{
+  padding: 10px 20px;
+}
+.card .content .title{
+  font-size: 25px;
+  font-weight: 600;
+}
+.card .content .sub-title{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+.card .content p{
+  text-align: justify;
+  margin: 10px 0;
+}
+.card .content .btn{
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
+.card .content .btn a{
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card .content .btn a:hover{
+  transform: scale(0.9);
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- ExplorAirm Team -->
+{%load static%}
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Homepage - admin</title>
+      <link rel="stylesheet" href="{%static 'css/homepage-admin.css' %}">
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <script src="https://kit.fontawesome.com/85adb81827.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <header class="container-fluid">
+         <div class="container">
+         <div class ="logo">
+             <h2>ExplorAir</h2>
+               </div>
+                  <nav>
+                  <a href='http://explorair.link/about/'>About</a> |
+                  <a href="http://explorair.link/confirm_editor/">requests</a> |
+                  <a href="http://explorair.link/log_out/">Log out</a> |
+                  <a href="http://explorair.link/search/">Search posts</a> |
+                  <a href="http://explorair.link/settings/"><i class="fas fa-user-cog"></i></a>|
+            </nav>                
+         </div>
+      </header>
+      <div class="sidenav">
+       {{name}}
+       {{surname}}
+       {{email}}
+       {{nickname}}
+       {{role}}
+     </div>
+      <div class="slider owl-carousel">
+         <div class="card">
+            <div class="img">
+               <img src="{%static 'images/rio.jpg' %}" alt="">
+            </div>
+            <div class="content">
+               <div class="title">
+                  {{title1}}
+               </div>
+               <div class="sub-title">
+                  {{editor_name1}}, {{date1}}
+               </div>
+               <p>
+                  {{post_text1}}
+
+               </p>
+               <div class="btn">
+                  <button>Read more</button>
+               </div>
+            </div>
+         </div>
+         <div class="card">
+            <div class="img">
+               <img src="{%static 'images/mexico.jpg' %}" alt="">
+            </div>
+            <div class="content">
+               <div class="title">
+                  {{title2}}
+               </div>
+               <div class="sub-title">
+                  {{editor_name2}}, {{date2}}
+               </div>
+               <p>
+                  {{post_text2}}
+
+               </p>
+               <div class="btn">
+                  <button>Read more</button>
+               </div>
+            </div>
+         </div>
+         <div class="card">
+            <div class="img">
+               <img src="{%static 'images/paris.jpg' %}" alt="">
+            </div>
+            <div class="content">
+               <div class="title">
+                  {{title3}}
+               </div>
+               <div class="sub-title">
+                  {{editor_name3}}, {{date3}}
+               </div>
+               <p>
+                  {{post_text3}}
+
+               </p>
+               <div class="btn">
+                  <button>Read more</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         $(".slider").owlCarousel({
+           loop: true,
+           autoplay: true,
+           autoplayTimeout: 2000, //2000ms = 2s;
+           autoplayHoverPause: true,
+         });
+      </script>
+
+     
+   </body>
+</html>
